@@ -25,7 +25,6 @@ cask "boxcryptor"
 cask "carbon-copy-cloner5"
 cask "command-pad"
 cask "docker"
-# cask "docker-toolbox"
 cask "duplicati"
 cask "eloston-chromium"
 cask "font-fira-code-nerd-font"
@@ -131,7 +130,6 @@ brew "tldr"
 brew "tmux"
 brew "tmux-xpanes"
 brew "wimlib"
-brew "wireshark", link: false
 brew "x11vnc"
 brew "ykpers"
 brew "yubico-piv-tool"
@@ -176,5 +174,5 @@ mas "ZipMounter Lite", id: 1438287690
 
 # 'whalebrew install'
 brew "whalebrew"
-whalebrew "3i9h7/docker-pyrit"
-whalebrew "whalebrew/wget"
+# whalebrew "3i9h7/docker-pyrit"
+# whalebrew "whalebrew/wget"
