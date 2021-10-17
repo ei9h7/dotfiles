@@ -1,0 +1,14 @@
+"*":
+  core:
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "synthwave-sharp-syntax"
+    ]
+  editor:
+    fontFamily: "Fira Code"
+    fontSize: 17
+  "exception-reporting":
+    userId: "696cd53b-b2c9-49eb-8cfe-b72dfaec162f"
+  welcome:
+    showOnStartup: false

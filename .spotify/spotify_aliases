@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Spotify aliases
+alias play="spotify play ; . $DOTFILES/.spotify/spotify_prompt"
+alias pause="spotify pause"
+alias stop="spotify stop"
+alias next="spotify next ; . $DOTFILES/.spotify/spotify_prompt"
+alias replay="spotify replay"
+alias prev="spotify prev ; . $DOTFILES/.spotify/spotify_prompt"
+alias vol="spotify vol"
+alias status="spotify status ; . $DOTFILES/.spotify/spotify_prompt"
+alias shuffle="spotify shuffle"
+alias repeat="spotify repeat"
+alias trackstatus="spotify status track"
+alias artiststatus="spotify status artist"
+alias albumstatus="spotify status album"

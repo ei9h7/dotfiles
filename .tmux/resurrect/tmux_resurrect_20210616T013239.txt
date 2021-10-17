@@ -1,0 +1,9 @@
+pane	1	0	:bash	1	:*	0	:/home/ei9h7	1	bash	:
+pane	8shellz	0	:spotify	1	:*	0	:/home/ei9h7	1	bash	:
+pane	8shellz	0	:spotify	1	:*	1	:/home/ei9h7	0	vi	:vi
+pane	8shellz	0	:spotify	1	:*	2	:/home/ei9h7	0	ncspot	:ncspot
+pane	8shellz	2	:google	0	:-	0	:/home/ei9h7	1	bash	:
+window	1	0	1	:*	b57e,148x32,0,0,1
+window	8shellz	0	1	:*	3ea4,148x32,0,0{80x32,0,0,2,67x32,81,0[67x14,81,0,3,67x17,81,15,4]}
+window	8shellz	2	0	:-	b582,148x32,0,0,5
+state	8shellz	1

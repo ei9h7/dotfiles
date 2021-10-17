@@ -1,0 +1,12 @@
+.DS_Store
+*.LSOverride
+Thumbs.db
+.bundle
+*.log
+*.tmp
+.ssh
+.gitconfig
+.bash_history
+.zsh_history
+.shpotify.cfg
+.bash_profile.local

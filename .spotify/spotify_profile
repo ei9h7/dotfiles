@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# spotify_profile
+
+#PATH
+export PATH="/usr/local/Cellar/shpotify/2.1/bin:/usr/local/bin:$PATH"
+
+source $DOTFILES/.spotify/spotify_aliases
+
+# Play opening track
+/usr/local/bin/spotify play Star Runner Droid Bishop
+# /usr/local/bin/spotify play uri spotify:playlist:2ALbeqn1aDPutYOozVRres
+
+source $DOTFILES/.spotify/spotify_prompt

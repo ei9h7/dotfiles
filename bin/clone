@@ -1,0 +1,13 @@
+#!/bin/sh
+
+echo "Cloning repositories..."
+
+SITES=$HOME/Sites
+PROJECTS=$HOME/projects
+
+# Personal
+# git clone git@github.com:driesvints/driesvints.com.git $SITES/driesvints.com
+
+
+# Projects
+# git clone git@github.com:blade-ui-kit/awesome-tall-stack.git $BLADE/awesome-tall-stack

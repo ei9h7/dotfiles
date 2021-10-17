@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+# spotify_prompt
+
+set_prompts() {
+    local green=""
+    local reset=""
+    local white=""
+
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+        tput sgr0 # reset colors
+
+        bold=$(tput bold)
+        reset=$(tput sgr0)
+
+        # Solarized colors
+        # (https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized#the-values)
+        white=$(tput setaf 15)
+    else
+        bold=""
+        reset="\e[0m"
+        green="\e[1;32m"
+    fi
+
+    # build the prompt
+
+    # set the terminal title to the current working directory
+    PS1="$green" # set colour
+    PS1+="Playing $(spotify status track) / " # currently playing
+    PS1+="\\$" #custom prompt $potify
+    PS1+="potify> "
+
+    export PS1
+}
+
+set_prompts
+unset set_prompts

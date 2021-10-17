@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Source Spotify specific Bash profile
+source $DOTFILES/.spotify/spotify_profile

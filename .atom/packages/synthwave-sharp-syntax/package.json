@@ -1,0 +1,54 @@
+{
+  "_from": "https://www.atom.io/api/packages/synthwave-sharp-syntax/versions/0.1.0/tarball",
+  "_id": "synthwave-sharp-syntax@0.1.0",
+  "_inBundle": false,
+  "_integrity": "sha512-gNZKJxi1bVNNjywkrMVjOAdo1KwtABj5a+hOLCvOqtg9kIXlTpgBLn0NMyPICygRS6av5D5Rcfkbixl2cUvKgA==",
+  "_location": "/synthwave-sharp-syntax",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/synthwave-sharp-syntax/versions/0.1.0/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/synthwave-sharp-syntax/versions/0.1.0/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/synthwave-sharp-syntax/versions/0.1.0/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/synthwave-sharp-syntax/versions/0.1.0/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/synthwave-sharp-syntax/versions/0.1.0/tarball",
+  "_shasum": "f5b60532c255ede5e1b1ffb6dbc1b7cf494a8ac9",
+  "_spec": "https://www.atom.io/api/packages/synthwave-sharp-syntax/versions/0.1.0/tarball",
+  "_where": "/private/var/folders/6j/9ymp78rs4r995b3svwhg0nwc0000gn/T/apm-install-dir-202143-75547-135uvtb.hf9s",
+  "bugs": {
+    "url": "https://github.com/outfrost/atom-synthwave-sharp-syntax/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "A sharper synthwave syntax theme. Fork of synthwave-neo-syntax.",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">= 1.13"
+  },
+  "homepage": "https://github.com/outfrost/atom-synthwave-sharp-syntax#readme",
+  "keywords": [
+    "theme",
+    "syntax",
+    "synthwave",
+    "outrun",
+    "vaporwave",
+    "neon",
+    "glow",
+    "dark"
+  ],
+  "license": "MIT",
+  "name": "synthwave-sharp-syntax",
+  "optionalDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/outfrost/atom-synthwave-sharp-syntax.git"
+  },
+  "theme": "syntax",
+  "version": "0.1.0"
+}

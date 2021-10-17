@@ -1,0 +1,162 @@
+#!/bin/sh
+
+#macOS specific aliases
+if [ $OSTYPE == darwin ]; then
+    alias finder='open -R'
+    # Empty the Trash on all mounted volumes and the main HDD
+    # Also, clear Apple’s System Logs to improve shell startup speed
+    alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
+    # Show/hide hidden files in Finder
+    alias showdotfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+    alias hidedotfiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+    # Hide/show all desktop icons (useful when presenting)
+    alias showdeskicons="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+    alias hidedeskicons="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+    # Flush DNS cache
+    alias flushdns="dscacheutil -flushcache"
+fi
+
+# Shortcuts
+alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
+alias reloadshell="source $HOME/.zshrc"
+alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
+alias ll="/usr/local/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
+alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
+alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
+alias c="clear"
+
+# Directories
+alias dotfiles="cd $DOTFILES"
+alias library="cd $HOME/Library"
+alias sites="cd $HOME/Sites"
+
+# VIM
+# Open file in existing MacVim window
+alias gvim="open -a MacVim"
+alias mvim="open -a MacVim"
+
+# Brew
+alias brewUp='brew update && brew upgrade && brew doctor'
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+
+# PHP
+alias cfresh="rm -rf vendor/ composer.lock && composer i"
+alias php74="docker run -it -w /data -v ${PWD}:/data:delegated --entrypoint php --rm registry.gitlab.com/grahamcampbell/php:7.4"
+alias php8="docker run -it -w /data -v ${PWD}:/data:delegated --entrypoint php --rm registry.gitlab.com/grahamcampbell/php:8.0"
+alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
+
+# JS
+alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
+alias watch="npm run watch"
+
+#XCODE
+alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
+alias watchos="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator\ \(Watch\).app"
+
+# Vagrant
+alias v="vagrant global-status"
+alias vup="vagrant up"
+alias vhalt="vagrant halt"
+alias vssh="vagrant ssh"
+alias vreload="vagrant reload"
+alias vrebuild="vagrant destroy --force && vagrant up"
+
+# Docker
+alias docker-composer="docker-compose"
+alias d='docker $*'
+alias d-c='docker-compose $*'
+
+# Git
+# Use `hub` as our git wrapper:
+#   
+# hub_path=$(which hub)
+# if (( $+commands[hub] ))
+# then
+  alias git=$hub_path
+# fi
+#
+# Remove `+` and `-` from start of diff lines; just rely upon color.
+alias diff='git diff --color | sed "s/^\([^-+ ]*\)[-+ ]/\\1/" | less -r'
+#
+alias gs="git status"
+alias gb="git branch"
+alias gc="git checkout"
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias amend="git add . && git commit --amend --no-edit"
+alias commit="git add . && git commit -m"
+alias force="git push --force"
+alias nuke="git clean -df && git reset --hard"
+alias pop="git stash pop"
+alias pull="git pull --rebase"
+alias push="git push"
+alias resolve="git add . && git commit --no-edit"
+alias stash="git stash -u"
+alias unstage="git restore --staged ."
+alias wip="commit wip"
+
+# Shell
+brew list thefuck &>/dev/null || brew install thefuck; # check if thefuck is installed and install if not
+eval $(thefuck --alias)
+# You can use whatever you want as an alias, like for Mondays:
+eval $(thefuck --alias FUCK)
+eval $(thefuck --alias fuck)
+
+# check for colorls gem and install if not
+if ! gem spec colorls > /dev/null 2>&1; then 
+    gem install colorls
+fi
+alias ls='colorls'
+source $(dirname $(gem which colorls))/tab_complete.sh
+
+alias zshconfig="$EDITOR ~/.zshrc"
+alias bashconfig="$EDITOR ~/.bash_profile"
+alias reload=". ~/.zshrc && . ~/.bash_profile"
+eval $(thefuck --alias)
+alias fk=fuck
+alias fu=fuck
+alias l="ls -oG" # Long form no user group, color
+alias lt="ls -toG" # Order by last modified, long form no user group, color
+alias la="ls -AGFoh" # List all except . and ..., color, mark file types, long form no user group, file size
+alias lat="ls -AGFoth" # List all except . and ..., color, mark file types, long form no use group, order by last modified, file size
+alias ll='ls -l'
+alias ls='ls -CF'
+alias mkdir='mkdir -p'
+alias q='quit'
+alias cs='clear;ls'
+alias h='history'
+alias p='cat'
+alias catn="cat -n" # Concatenate and print content of files (add line numbers)
+alias pd='pwd'
+alias t='time'
+alias k='kill'
+alias null='/dev/null'
+alias home='cd ~'
+alias root='cd /'
+alias proj='cd ~/projects'
+alias o='open'
+alias ..='cd ..'
+alias ...='cd ..;cd ..'
+alias ....='cd ..;cd ..; cd ..'
+alias ~="cd ~"
+alias -- -="cd -"
+alias _='sudo '
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# Spotify aliases
+alias play="spotify play"
+alias pause="spotify pause"
+alias stop="spotify stop"
+alias next="spotify next"
+alias replay="spotify replay"
+alias prev="spotify prev"
+alias vol="spotify vol"
+alias status="spotify status"
+alias shuffle="spotify shuffle"
+alias repeat="spotify repeat"

@@ -1,0 +1,7 @@
+pane	8shellz	0	:spotify	1	:*	0	:/home/ei9h7	1	bash	:
+pane	8shellz	0	:spotify	1	:*	1	:/home/ei9h7	0	htop	:htop
+pane	8shellz	0	:spotify	1	:*	2	:/home/ei9h7	0	ncspot	:ncspot
+pane	8shellz	2	:google	0	:-	0	:/home/ei9h7	1	links	:links http://www.google.com
+window	8shellz	0	1	:*	15cb,148x30,0,0{93x30,0,0,0,54x30,94,0[54x4,94,0,10,54x25,94,5,9]}
+window	8shellz	2	0	:-	ad7f,148x30,0,0,2
+state	8shellz	
