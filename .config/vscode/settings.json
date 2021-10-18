@@ -1,0 +1,106 @@
+{
+// THEME
+    "workbench.colorTheme": "SynthWave '84",
+    "synthwave84.brightness": 1,
+    "darkSynthwave84.brightness": 1,
+    "powermode.enabled": true,
+
+// EDITOR SETTINGS
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.fontFamily": "VictorMono Nerd Font",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 17,
+    "editor.letterSpacing": 1,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+
+// TERMINAL SETTINGS
+    "terminal.integrated.fontFamily": "VictorMono Nerd Font",
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.letterSpacing": 1,
+    "terminal.integrated.tabs.enabled": true,
+
+    // macOS
+    "terminal.external.osxExec": "Therm.app",
+    "terminal.integrated.env.osx": {},
+    "terminal.integrated.macOptionIsMeta": true,
+    "terminal.integrated.profiles.osx": {
+        "bash": {
+            "path": "bash"
+        },
+        "zsh": {
+            "path": "zsh",
+            "args": ["-l"]
+        },
+        "pwsh": {
+            "path": "pwsh"
+        }
+    },
+    "terminal.integrated.defaultProfile.osx": "bash",
+
+    // WINDOWS
+    "terminal.integrated.profiles.windows": {
+        "PowerShell 7": {
+            "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+        },
+        "Command Prompt": {
+            "path": "C:\\Windows\\System32\\cmd.exe",
+        },
+        "Debian (WSL)": {
+            "path": "C:\\Windows\\System32\\wsl.exe -d Debian",
+        },
+        "Kali (WSL)": {
+            "path": "C:\\Windows\\System32\\wsl.exe -d Kali",
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "Debian (WSL)",
+    "terminal.external.windowsExec": "C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.8.1444.0_x64__8wekyb3d8bbwe\\WindowsTerminal.exe",
+
+    // LINUX
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        "screen": {
+            "path": "screen"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        }
+    },
+    "terminal.integrated.defaultProfile.linux": "screen",
+
+// EXTENSION SETTINGS
+    "bracket-pair-colorizer-2.colors": [
+        "#DFF959",
+        "#F834BB",
+        "#2BF5E9",
+        "#D831D7"
+    ],
+    "git-graph.graph.colours": [
+        "#FF428E",
+        "#A8FFEF",
+        "#DFF959",
+        "#F7A409",
+        "#F834BB",
+        "#2BF5E9",
+        "#D831D7",
+        "#FF594C"
+    ],
+    "DockerRun.DisableAutoGenerateConfig": true,
+    "workbench.sideBar.location": "right",
+    "git.enableCommitSigning": true,
+    "redhat.telemetry.enabled": true,
+    "telemetry.telemetryLevel": "off"
+}
