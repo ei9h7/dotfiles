@@ -69,15 +69,6 @@ alias docker-composer="docker-compose"
 alias d='docker $*'
 alias d-c='docker-compose $*'
 
-# Git
-# Use `hub` as our git wrapper:
-#   
-# hub_path=$(which hub)
-# if (( $+commands[hub] ))
-# then
-  alias git=$hub_path
-# fi
-#
 # Remove `+` and `-` from start of diff lines; just rely upon color.
 alias diff='git diff --color | sed "s/^\([^-+ ]*\)[-+ ]/\\1/" | less -r'
 #
