@@ -43,12 +43,8 @@ export CPPFLAGS="-I/usr/local/opt/ruby/include"
 #   source `brew --prefix`/etc/grc.bashrc
 # fi
 
-# bash git prompt
-  if [ -f /usr/local/opt/bash-git-prompt/share/gitprompt.sh ]; then
-    __GIT_PROMPT_DIR=/usr/local/opt/bash-git-prompt/share
-    source /usr/local/opt/bash-git-prompt/share/gitprompt.sh; else
-    source $DOTFILES/.bash_prompt
-  fi
+# bash prompt
+source $DOTFILES/.bash_prompt
 
 # bash completion
 $(brew --prefix)/etc/bash_completion # Bash completion (installed via Homebrew)
