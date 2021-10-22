@@ -113,7 +113,7 @@ source $(dirname $(gem which colorls))/tab_complete.sh
 
 alias zshconfig="$EDITOR ~/.zshrc"
 alias bashconfig="$EDITOR ~/.bash_profile"
-alias reload=". ~/.zshrc && . ~/.bash_profile"
+alias reload="if [ -z "${ZSH_VERSION+x}" ]; then . ~/.bash_profile; else . ~/.zshrc; fi"
 eval $(thefuck --alias)
 alias fk=fuck
 alias fu=fuck
