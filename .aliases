@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# dotfiles git alias
+alias config="git --git-dir='$DOTFILES'"
+
 #macOS specific aliases
 if [ $OSTYPE == darwin ]; then
     alias finder='open -R'
@@ -14,6 +17,12 @@ if [ $OSTYPE == darwin ]; then
     alias hidedeskicons="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
     # Flush DNS cache
     alias flushdns="dscacheutil -flushcache"
+fi
+
+# Linux specific aliases
+if [ "${OS}" == "Linux" ]; then
+    # use open source VScode (Codium) on Linux
+    alias code='codium'
 fi
 
 # Shortcuts
