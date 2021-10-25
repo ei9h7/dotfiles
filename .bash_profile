@@ -45,8 +45,8 @@ fi
 
 # GRC colorizes nifty unix tools all over the place
 GRC_ALIASES=true
-[ -s "`brew --prefix`/etc/grc.bashrc" ] && source "`brew --prefix`/etc/grc.bashrc"
-[ -s "`brew --prefix`/etc/grc.sh" ] && source "`brew --prefix`/etc/grc.sh"
+[ -s "$(brew --prefix)/etc/grc.bashrc" ] && source "$(brew --prefix)/etc/grc.bashrc"
+[ -s "$(brew --prefix)/etc/grc.sh" ] && source "$(brew --prefix)/etc/grc.sh"
 [ -s "/etc/profile.d/grc.sh" ] && source "/etc/grc.sh"
 
 # Autocorrect typos in path names when using `cd`
