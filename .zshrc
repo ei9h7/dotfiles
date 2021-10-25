@@ -2,8 +2,27 @@
 
 # ~/.zshrc: executed by zsh(1) for non-login shells.
 
-# Include .env file to set env variable in advance of any other task, and if doesnt exist to set $DOTFILES as $HOME and set $USER independent of sudo
-[ -f "$PWD/projects/dotfiles/.env" ] && source "$PWD/projects/dotfiles/.env" || { export HOME=$PWD && export DOTFILES=$PWD && export USER=`who am i | awk '{print $1}'` ;}
+# Include .env file to set env variable in advance of any other task, and if doesnt exist to set $HOME, $USER, and $DOTFILES
+if [ -f "$HOME/projects/dotfiles/.env" ]; then
+  source "$HOME/projects/dotfiles/.env"; else
+  # export USER variable regardless of sudo
+  export USER=$(whoami)
+# Determine OS and Nix Type
+  case "$OSTYPE" in
+    solaris*) export OS="Solaris" ;;
+    darwin*)  export OS="macOS" ;;
+    linux*)   export OS="Linux" ;;
+    bsd*)     export OS="BSD" ;;
+    msys*)    export OS="Windows" ;;
+    cygwin*)  export OS="Windows" ;;
+    *)        export OS="unknown: $OSTYPE" ;;
+  esac
+  # Declare environmental variable $HOME per OS
+  [ "$OS" == "Linux" ] && export HOME="/home/$USER"
+  [ "$OS" == "macOS" ] && export HOME="/Users/$USER"
+  # Declare $DOTFILES
+  [ -d $HOME/projects/dotfiles ] && export DOTFILES="$HOME/projects/dotfiles" || export DOTFILES="$HOME"
+fi
 
 # Include paths file (if present)
 [ -f "$DOTFILES/.paths" ] && source "$DOTFILES/.paths"
