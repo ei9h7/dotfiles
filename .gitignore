@@ -13,3 +13,4 @@ Thumbs.db
 .bash_profile.local
 .viminfo
 *.swp
+*.kbx
