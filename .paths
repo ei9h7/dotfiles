@@ -12,6 +12,7 @@ declare -a dirs_to_prepend=(
     "/opt/homebrew/bin"
     "/usr/local/opt/ruby/bin"
     "/usr/local/lib/ruby/gems/2.7.0/bin"
+    "/usr/local/MacGPG2/bin"
 )
 
 # Directories to be appended to PATH

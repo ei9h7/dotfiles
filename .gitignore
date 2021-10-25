@@ -12,3 +12,4 @@ Thumbs.db
 .shpotify.cfg
 .bash_profile.local
 .viminfo
+*.swp
