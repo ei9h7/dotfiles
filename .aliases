@@ -101,16 +101,14 @@ alias wip="commit wip"
 
 # Shell
 # thefuck
-[ "${OS}" == "Linux" ] && [ thefuck &>/dev/null ] || pip3 install thefuck 
-[ "${OS}" == "macOS" ] && [ brew list thefuck &>/dev/null ] || brew install thefuck
+[ "$(command -v thefuck)" ] || pip3 install thefuck --user
 eval $(thefuck --alias)
 # You can use whatever you want as an alias, like for Mondays:
 eval $(thefuck --alias FUCK)
 eval $(thefuck --alias fuck)
 
 # check for colorls gem and install if not
-[ gem spec colorls > /dev/null 2>&1 ] || sudo gem install colorls
-
+[ "$(command -v colorls)" ] || gem install colorls --user-install
 alias ls='colorls'
 source $(dirname $(gem which colorls))/tab_complete.sh
 
