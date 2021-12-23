@@ -108,9 +108,9 @@ eval $(thefuck --alias FUCK)
 eval $(thefuck --alias fuck)
 
 # check for colorls gem and install if not
-[ "$(command -v colorls)" ] || gem install colorls --user-install
-alias ls='colorls'
-source $(dirname $(gem which colorls))/tab_complete.sh
+# [ "$(command -v colorls)" ] || gem install colorls --user-install
+# alias ls='colorls'
+# source $(dirname $(gem which colorls))/tab_complete.sh
 
 alias zshconfig="$EDITOR ~/.zshrc"
 alias bashconfig="$EDITOR ~/.bash_profile"

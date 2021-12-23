@@ -7,28 +7,18 @@ if [ -f "$HOME/projects/dotfiles/.env" ]; then
   source "$HOME/projects/dotfiles/.env"; else
   # export USER variable regardless of sudo
   export USER=$(whoami)
-# Determine OS and Nix Type
-  case "$OSTYPE" in
-    solaris*) export OS="Solaris" ;;
-    darwin*)  export OS="macOS" ;;
-    linux*)   export OS="Linux" ;;
-    bsd*)     export OS="BSD" ;;
-    msys*)    export OS="Windows" ;;
-    cygwin*)  export OS="Windows" ;;
-    *)        export OS="unknown: $OSTYPE" ;;
-  esac
   # Declare environmental variable $HOME per OS
-  [ "$OS" == "Linux" ] && export HOME="/home/$USER"
-  [ "$OS" == "macOS" ] && export HOME="/Users/$USER"
-  # Declare $DOTFILES
-  [ -d $HOME/projects/dotfiles ] && export DOTFILES="$HOME/projects/dotfiles" || export DOTFILES="$HOME"
+[ "$OS" == "Linux" ] && export HOME="/home/$USER"
+[ "$OS" == "macOS" ] && export HOME="/Users/$USER"
+# Declare $DOTFILES directory
+[ -d $HOME/projects/dotfiles ] && export DOTFILES="$HOME/projects/dotfiles"
 fi
 
 # Include paths file (if present)
 [ -f "$DOTFILES/.paths" ] && source "$DOTFILES/.paths"
 
 # Include alias file (if present) containing aliases for ssh, etc.
-[ -f "$DOTFILES/.aliases" ] && source "$DOTFILES/.aliases"
+# [ -f "$DOTFILES/.aliases" ] && source "$DOTFILES/.aliases"
 
 # Include functions file (if present) containing useful functions.
 [ -f "$DOTFILES/.functions" ] && source "$DOTFILES/.functions"

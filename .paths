@@ -11,7 +11,7 @@ declare -a dirs_to_prepend=(
     "$HOME/Library/Python/3.8/bin"
     "/opt/homebrew/bin"
     "/usr/local/opt/ruby/bin"
-    "/usr/local/lib/ruby/gems/2.7.0/bin"
+    "/usr/local/lib/ruby/gems/2.6.0/bin"
     "/usr/local/MacGPG2/bin"
 )
 
