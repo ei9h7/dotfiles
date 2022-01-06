@@ -13,6 +13,8 @@ declare -a dirs_to_prepend=(
     "/usr/local/opt/ruby/bin"
     "/usr/local/lib/ruby/gems/2.6.0/bin"
     "/usr/local/MacGPG2/bin"
+    "/usr/local/bin"
+    "/snap/bin"
 )
 
 # Directories to be appended to PATH
@@ -20,6 +22,7 @@ declare -a dirs_to_append=(
     "/usr/bin"
     "$HOME/bin"
     "$DOTFILES/bin"
+    "$HOME/.local/bin"
     # Add brew-installed GNU core utilities bin
     # "$(brew --prefix coreutils)/libexec/gnubin" 
     # Add npm-installed package bin
@@ -44,4 +47,5 @@ unset dirs_to_prepend dirs_to_append
 
 export PATH
 
+export XDG_DATA_DIRS="/var/lib/snapd/desktop"
 
