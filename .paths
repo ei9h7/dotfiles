@@ -21,9 +21,9 @@ declare -a dirs_to_append=(
     "$HOME/bin"
     "$DOTFILES/bin"
     # Add brew-installed GNU core utilities bin
-    "$(brew --prefix coreutils)/libexec/gnubin" 
+    # "$(brew --prefix coreutils)/libexec/gnubin" 
     # Add npm-installed package bin
-    "$(brew --prefix)/share/npm/bin"
+    # "$(brew --prefix)/share/npm/bin"
 )
 
 # Prepend directories to PATH
