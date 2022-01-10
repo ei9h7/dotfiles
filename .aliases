@@ -161,3 +161,6 @@ alias "-vol"="spotify vol"
 alias "-status"="spotify status"
 alias "-shuffle"="spotify shuffle"
 alias "-repeat"="spotify repeat"
+
+# gpg
+alias gpgResetKey='gpg-connect-agent "scd serialno" "learn --force" /bye'
