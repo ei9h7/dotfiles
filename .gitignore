@@ -1,16 +1,27 @@
-.config/git/config
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# System Files
 .DS_Store
+Thumbs.db
+.gitignore
+.gitconfig
+.config/git/config
 *.LSOverride
 Thumbs.db
 .bundle
 *.log
 *.tmp
 .ssh
-.gitconfig
 .bash_history
 .zsh_history
 .shpotify.cfg
 .bash_profile.local
 .viminfo
-*.swp
 *.kbx
+
+# swaps and locks
+*.swp
+*.lock
+
+# folioformac
+.folio
