@@ -47,7 +47,7 @@ alias mvim="open -a MacVim"
 fi
 
 # Brew
-alias brewUp='brew update && brew upgrade && brew doctor'
+# alias brewUp='brew update && brew upgrade && brew doctor'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"

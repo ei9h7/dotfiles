@@ -6,15 +6,15 @@
 declare -a dirs_to_prepend=(
     #sure that this bin always takes precedence over `/usr/bin`    
     "/usr/local/bin"
-    "/usr/local/sbinsss"
+    "/usr/local/sbin"
     "/usr/local/opt"
     "$HOME/Library/Python/3.8/bin"
-    "/opt/homebrew/bin"
+#   "/opt/homebrew/bin"
     "/usr/local/opt/ruby/bin"
     "/usr/local/lib/ruby/gems/2.6.0/bin"
     "/usr/local/MacGPG2/bin"
     "/usr/local/bin"
-    "/snap/bin"
+#   "/snap/bin"
 )
 
 # Directories to be appended to PATH
@@ -47,5 +47,5 @@ unset dirs_to_prepend dirs_to_append
 
 export PATH
 
-export XDG_DATA_DIRS="/var/lib/snapd/desktop"
+# export XDG_DATA_DIRS="/var/lib/snapd/desktop"
 
