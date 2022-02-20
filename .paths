@@ -10,6 +10,7 @@ declare -a dirs_to_prepend=(
     "/usr/local/opt"
     "$HOME/Library/Python/3.8/bin"
     "/opt/homebrew/bin"
+    "/opt/homebrew/sbin"
     "/usr/local/opt/ruby/bin"
     "/usr/local/lib/ruby/gems/2.6.0/bin"
     "/usr/local/MacGPG2/bin"
@@ -17,6 +18,7 @@ declare -a dirs_to_prepend=(
 
 # Directories to be appended to PATH
 declare -a dirs_to_append=(
+    "/sbin"
     "/usr/bin"
     "$HOME/bin"
     "$DOTFILES/bin"
