@@ -47,7 +47,7 @@ sudo scutil --set LocalHostName "8s iCrack"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "8s iCrack"
 
 # Choose default shell
-chsh -s $(which bash) {{ lookup('env', 'USER') }}
+# chsh -s $(which bash) {{ lookup('env', 'USER') }}
 
 # Set sidebar icon size to medium
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
