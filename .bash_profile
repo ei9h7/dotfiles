@@ -3,15 +3,15 @@
 # bash_profile
 
 # Include .env file to set env variable in advance of any other task, and if doesnt exist to set $HOME, $USER, and $DOTFILES
-if [ -f "$HOME/projects/dotfiles/.env" ]; then
-  source "$HOME/projects/dotfiles/.env"; else
+if [ -f "$HOME/repos/dotfiles/.env" ]; then
+  source "$HOME/repos/dotfiles/.env"; else
   # export USER variable regardless of sudo
   export USER=$(whoami)
   # Declare environmental variable $HOME per OS
 [ "$OS" == "Linux" ] && export HOME="/home/$USER"
 [ "$OS" == "macOS" ] && export HOME="/Users/$USER"
 # Declare $DOTFILES directory
-[ -d $HOME/projects/dotfiles ] && export DOTFILES="$HOME/projects/dotfiles"
+[ -d $HOME/repos/dotfiles ] && export DOTFILES="$HOME/repos/dotfiles"
 fi
 
 # Include paths file (if present)

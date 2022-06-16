@@ -8,7 +8,7 @@ declare -a dirs_to_prepend=(
     "/usr/local/bin"
     "/usr/local/sbinsss"
     "/usr/local/opt"
-    "$HOME/Library/Python/3.8/bin"
+#   "$HOME/Library/Python/3.8/bin"
     "/opt/homebrew/bin"
     "/opt/homebrew/sbin"
     "/usr/local/opt/ruby/bin"
