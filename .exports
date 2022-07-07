@@ -63,3 +63,9 @@ export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 command -v brew >/dev/null 2>&1 && export SSH_AUTH_SOCK="$(brew --prefix)/var/run/yubikey-agent.sock" 
 gpgconf --launch gpg-agent
 
+# Installed nvm via Ansible START ANSIBLE MANAGED BLOCK
+
+# Source nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+# Ansible END ANSIBLE MANAGED BLOCK
