@@ -35,9 +35,11 @@ fi
 
 # GRC colorizes nifty unix tools all over the place
 # GRC_ALIASES=true
-# [ -s "$(brew --prefix)/etc/grc.bashrc" ] && source "$(brew --prefix)/etc/grc.bashrc"
-# [ -s "$(brew --prefix)/etc/grc.sh" ] && source "$(brew --prefix)/etc/grc.sh"
-# [ -s "/etc/profile.d/grc.sh" ] && source "/etc/grc.sh"
+if command -v brew >/dev/null 2>&1; then
+  [ -s "$(brew --prefix)/etc/grc.bashrc" ] && source "$(brew --prefix)/etc/grc.bashrc"
+  [ -s "$(brew --prefix)/etc/grc.sh" ] && source "$(brew --prefix)/etc/grc.sh"
+fi
+  [ -s "/etc/profile.d/grc.sh" ] && source "/etc/grc.sh"
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
@@ -64,7 +66,7 @@ shopt -s nocasematch
 # Silence bash deprecation warning in Catalina
 [ "$OS" == "macOS" ] && export BASH_SILENCE_DEPRECATION_WARNING=1
 
-# GPG Agent -- included in .env instead
+# GPG Agent -- included in .exports instead
 # export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 # gpgconf --launch gpg-agent
 
