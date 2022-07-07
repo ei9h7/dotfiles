@@ -25,17 +25,17 @@ esac
 
 # linuxbrew environment
 # if [ "$OS" == "Linux" ]; then
-   test -d "$HOME/.linuxbrew" && eval "$($HOME/.linuxbrew/bin/brew shellenv)"
-   test -d "/home/linuxbrew/.linuxbrew" && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+#   test -d "$HOME/.linuxbrew" && eval "$($HOME/.linuxbrew/bin/brew shellenv)"
+#   test -d "/home/linuxbrew/.linuxbrew" && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # fi
 
 # Set architecture-specific brew share path.
-arch_name="$(uname -m)"
-[ "${arch_name}" = "x86_64" ] && export share_path="/usr/local/share"
-[ "${arch_name}" = "arm64" ] && export share_path="/opt/homebrew/share"
+# arch_name="$(uname -m)"
+# [ "${arch_name}" = "x86_64" ] && export share_path="/usr/local/share"
+# [ "${arch_name}" = "arm64" ] && export share_path="/opt/homebrew/share"
 
 # Stop brew auto update
-export HOMEBREW_AUTO_UPDATING=0
+# export HOMEBREW_AUTO_UPDATING=0
 
 # Preferred editor for local and remote sessions
 [ -n $SSH_CONNECTION ] && export EDITOR="vi"
@@ -46,7 +46,7 @@ export HOMEBREW_AUTO_UPDATING=0
 export COMPOSER_MEMORY_LIMIT=-1
 
 # Tell homebrew to not autoupdate every single time I run it (just once a week).
-export HOMEBREW_AUTO_UPDATE_SECS=604800
+# export HOMEBREW_AUTO_UPDATE_SECS=604800
 
 # help compilers find ruby
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
@@ -54,7 +54,8 @@ export CPPFLAGS="-I/usr/local/opt/ruby/include"
 
 # gpg with yubikey setup
 export GPG_TTY="$(tty)"
-# check for macOS homebrew yubikey agent
-command -v brew >/dev/null 2>&1 && export SSH_AUTH_SOCK="$(brew --prefix)/var/run/yubikey-agent.sock" || export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+# check for macOS homebrew yubikey agent and re-export ssh_auth_sock if applicable
+[ "$OS" == "macOS" ] && command -v brew >/dev/null 2>&1 && export SSH_AUTH_SOCK="$(brew --prefix)/var/run/yubikey-agent.sock" 
 gpgconf --launch gpg-agent
 
