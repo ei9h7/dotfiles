@@ -21,7 +21,7 @@ esac
 [ "$OS" == "macOS" ] && export HOME="/Users/$USER"
 
 # Declare $DOTFILES directory
-[ -d $HOME/projects/dotfiles ] && export DOTFILES="$HOME/projects/dotfiles"
+[ -d $HOME/repos/dotfiles ] && export DOTFILES="$HOME/repos/dotfiles"
 
 # linuxbrew environment
 # if [ "$OS" == "Linux" ]; then
@@ -57,3 +57,4 @@ export GPG_TTY="$(tty)"
 # check for macOS homebrew yubikey agent
 command -v brew >/dev/null 2>&1 && export SSH_AUTH_SOCK="$(brew --prefix)/var/run/yubikey-agent.sock" || export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 gpgconf --launch gpg-agent
+
