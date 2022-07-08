@@ -72,3 +72,6 @@ shopt -s nocasematch
 
 # iterm2 integration
 [ "$OS" == "macOS" ] && test -e "$DOTFILES/.iterm2_shell_integration.bash" && source "$DOTFILES/.iterm2_shell_integration.bash" || true
+
+#choose default node
+[ -d $HOME/.nvm ] && nvm use default
