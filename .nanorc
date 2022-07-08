@@ -19,7 +19,7 @@
 ## Automatically indent a newly created line to the same number of
 ## tabs and/or spaces as the preceding line -- or as the next line
 ## if the preceding line is the beginning of a paragraph.
-# set autoindent
+set autoindent
 
 ## Back up files to the current filename plus a tilde.
 # set backup
@@ -68,7 +68,7 @@
 # set jumpyscrolling
 
 ## Display line numbers to the left (and any anchors in the margin).
-# set linenumbers
+set linenumbers
 
 ## Enable vim-style lock-files.  This is just to let a vim user know you
 ## are editing a file [s]he is trying to edit and vice versa.  There are
@@ -154,10 +154,10 @@ set mouse
 ## will jump to that beginning (either forwards or backwards).  If the
 ## cursor is already at that position, it will jump to the true
 ## beginning of the line.
-# set smarthome
+set smarthome
 
 ## Spread overlong lines over multiple screen lines.
-# set softwrap
+set softwrap
 
 ## Use this spelling checker instead of the internal one.  This option
 ## does not have a default value.
@@ -165,14 +165,14 @@ set mouse
 
 ## Use the end of the title bar for some state flags: I = auto-indenting,
 ## M = mark, L = hard-wrapping long lines, R = recording, S = soft-wrapping.
-# set stateflags
+set stateflags
 
 ## Allow nano to be suspended (with ^Z by default).
 # set suspendable
 ## (The old form of this option, 'set suspend', is deprecated.)
 
 ## Use this tab size instead of the default; it must be greater than 0.
-# set tabsize 8
+set tabsize 4
 
 ## Convert typed tabs to spaces.
 set tabstospaces
@@ -204,37 +204,37 @@ set tabstospaces
 
 ## Paint the interface elements of nano.  These are examples; there are
 ## no colors by default, except for errorcolor and spotlightcolor.
-# set titlecolor bold,lightwhite,blue
-# set promptcolor lightwhite,lightblack
-# set statuscolor bold,lightwhite,green
-# set errorcolor bold,lightwhite,red
-# set spotlightcolor black,lime
-# set selectedcolor lightwhite,magenta
-# set stripecolor ,yellow
-# set scrollercolor cyan
-# set numbercolor cyan
-# set keycolor cyan
-# set functioncolor green
+set titlecolor bold,lightwhite,blue
+set promptcolor lightwhite,lightblack
+set statuscolor bold,lightwhite,green
+set errorcolor bold,lightwhite,red
+set spotlightcolor black,lime
+set selectedcolor lightwhite,magenta
+set stripecolor ,yellow
+set scrollercolor cyan
+set numbercolor cyan
+set keycolor cyan
+set functioncolor green
 
 ## In root's .nanorc you might want to use:
-# set titlecolor bold,lightwhite,magenta
-# set promptcolor black,yellow
-# set statuscolor bold,lightwhite,magenta
-# set errorcolor bold,lightwhite,red
-# set spotlightcolor black,orange
-# set selectedcolor lightwhite,cyan
-# set stripecolor ,yellow
-# set scrollercolor magenta
-# set numbercolor magenta
-# set keycolor lightmagenta
-# set functioncolor magenta
+set titlecolor bold,lightwhite,magenta
+set promptcolor black,yellow
+set statuscolor bold,lightwhite,magenta
+set errorcolor bold,lightwhite,red
+set spotlightcolor black,orange
+set selectedcolor lightwhite,cyan
+set stripecolor ,yellow
+set scrollercolor magenta
+set numbercolor magenta
+set keycolor lightmagenta
+set functioncolor magenta
 
 
 ## === Syntax coloring ===
 ## For all details, see 'man nanorc', section SYNTAX HIGHLIGHTING.
 
 ## To include most of the existing syntax definitions, you can do:
-# include "@PKGDATADIR@/*.nanorc"
+include "@PKGDATADIR@/*.nanorc"
 
 ## Or you can select just the ones you need.  For example:
 # include "@PKGDATADIR@/html.nanorc"
