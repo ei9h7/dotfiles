@@ -234,7 +234,7 @@ set functioncolor magenta
 ## For all details, see 'man nanorc', section SYNTAX HIGHLIGHTING.
 
 ## To include most of the existing syntax definitions, you can do:
-include "/usr/local/Cellar/nano/*/share/nano/*.nanorc"
+include "/usr/local/share/nano/*.nanorc"
 
 ## Or you can select just the ones you need.  For example:
 # include "@PKGDATADIR@/html.nanorc"
